@@ -8,9 +8,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import NotFoundPage from './NotFoundPage';
 
-const mapStateToProps = createStructuredSelector({
-
-});
+const mapStateToProps = createStructuredSelector({});
 
 function mapDispatchToProps() {
   return {};
