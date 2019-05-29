@@ -1,0 +1,44 @@
+/**
+ *
+ * {{properCase name }}
+ *
+ */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+{{#if wantActionsAndReducer}}
+import { createStructuredSelector } from 'reselect';
+{{/if}}
+import {{ properCase name }} from './{{ properCase name }}';
+{{#if wantActionsAndReducer}}
+import makeSelect{{properCase name}} from '../../redux/{{ properCase name }}/selectors';
+import reducer from '../../redux/{{ properCase name }}/reducer';
+{{/if}}
+{{#if wantSaga}}
+import saga from '../../redux/{{ properCase name }}/saga';
+{{/if}}
+{{#if wantMessages}}
+import messages from './messages';
+{{/if}}
+
+{{#if wantActionsAndReducer}}
+const mapStateToProps = createStructuredSelector({
+  {{ camelCase name }}: makeSelect{{properCase name}}(),
+});
+{{/if}}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    
+  };
+}
+
+{{#if wantActionsAndReducer}}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)({{ properCase name }});
+{{else}}
+export default {{ properCase name }}
+{{/if}}

@@ -1,0 +1,23 @@
+import React from 'react';
+{{#if wantMessages}}
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+{{/if}}
+
+export default class {{ properCase name }} extends React.PureComponent {
+
+    render() {
+        return (
+            <div>
+                {{#if wantMessages}}
+                <FormattedMessage {...messages.header} />
+                {{/if}}
+            </div>
+        );
+    }
+}
+
+
+
+{{ properCase name }}.propTypes = {
+};

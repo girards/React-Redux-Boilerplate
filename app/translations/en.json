@@ -1,0 +1,6 @@
+{
+  "app.containers.Header.header": "This is the Header container!",
+  "app.containers.LoginPage.header": "This is the LoginPage container!",
+  "app.containers.NotFoundPage.header": "This is the NotFoundPage container!",
+  "app.containers.SignUpPage.header": "This is the SignUpPage container!"
+}
